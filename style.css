@@ -115,7 +115,7 @@ body {
 }
 
 .balloon:after {
- display:inline-block; top:153px;
+ display:inline-block; top:104px;
   position:absolute;
   height:250px;
   width:1px;
