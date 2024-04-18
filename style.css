@@ -3,7 +3,7 @@
 body {
     background:hsl(70, 31%, 85%); 
     text-align:center; 
-    padding-top: 5vh;
+    padding-top: 15vh;
 }
 
 .container {
@@ -23,7 +23,7 @@ body {
 
 .card-content {
     text-align: center;
-    padding-top: 45vw;
+    padding-top: 40vw;
     padding-bottom: 2vh;
 }
 
@@ -36,7 +36,7 @@ body {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 3vh;
+    top: 13vh;
     left: 0;
     right: 0;
     text-align: center;
@@ -50,7 +50,7 @@ body {
 .balloon.fourth,
 .balloon.fifth {
     position: absolute;
-    top: 0;
+    top: 3vh;
     margin-left: auto;
     margin-right: auto;
 }
