@@ -1,49 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Rammetto+One&family=Satisfy&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   background: hsl(70, 31%, 85%);
   text-align: center;
-  padding-top: 15vh;
+
+  display: flex;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
   margin: 0 auto;
-  width: 90%;
-  height: 80%;
+  width: clamp(350px, 90%, 600px);
 }
 
 .card {
   background-color: #fdbe14;
   border-radius: 50px;
   color: #000000;
+  padding: 40px;
 }
 
 .card__title {
   font-family: "Rammetto One", monospace;
-  font-size: 10vw;
+  font-size: clamp(3rem, 12vw, 5rem);
 }
 
 .card__content {
   text-align: center;
-  padding-top: 40vw;
-  padding-bottom: 2vh;
 }
 
 .card__text {
   font-family: "Satisfy", Verdana, sans-serif;
-  font-size: 7vw;
+  font-size: clamp(2.5rem, 10vw, 3.5rem);
 }
 
 .card__image {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  top: 13vh;
-  left: 0;
-  right: 0;
-  text-align: center;
-  width: 45%;
-  height: auto;
+  width: clamp(220px, 100%, 450px);
+  margin: 0 auto;
 }
 
 .balloon {
@@ -78,7 +82,7 @@ body {
 
 .balloon:before {
   content: "▲";
-  font-size: 20px;
+  font-size: 2rem;
   color: hsl(215, 30%, 50%);
   display: block;
   text-align: center;
