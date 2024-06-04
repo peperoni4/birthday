@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Birthday!</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./src/styles/style.css" />
+  </head>
+  <body>
+    <div class="bg-image"></div>
     <div class="container">
-        <img class="birthday-cake-image" src="./img/birthday_cake.png" alt="A beautiful birthday cake">
-        <div class="card-content">
-            <h1 class="card-title">Happy Birthday</h1>
-            <p class="card-text">My Dear Brother!</p>
+      <div class="card">
+        <img
+          class="card__image"
+          src="./resources/birthday_cake.png"
+          alt="A beautiful birthday cake"
+        />
+        <div class="card__content">
+          <h1 class="card__title">Happy<br />Birthday</h1>
+          <p class="card__text">Matthew</p>
         </div>
+      </div>
     </div>
 
-    <div class="balloon first"></div>
-    <div class="balloon second"></div>
-    <div class="balloon third"></div>
-    <div class="balloon fourth"></div>
-    <div class="balloon fifth"></div>
-</body>
+    <div class="balloons"></div>
+    <script type="module" src="./src/index.js"></script>
+    <script
+      type="module"
+      src="./src/javascript/components/balloonView.js"
+    ></script>
+    <script type="module" src="./src/javascript/helpers/domHelper.js"></script>
+  </body>
 </html>
