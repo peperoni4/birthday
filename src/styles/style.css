@@ -17,9 +17,10 @@ body {
   align-items: center;
   height: 100vh;
 }
+
 .bg-image {
   /* The image used */
-  background: url("./img/background.png ");
+  background: url("../../resources/background.png ");
 
   /* Add the blur effect */
   filter: blur(4px);
