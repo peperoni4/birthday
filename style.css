@@ -33,7 +33,7 @@ body {
 
 .card__title {
   font-family: "Rammetto One", monospace;
-  font-size: clamp(3rem, 12vw, 5rem);
+  font-size: clamp(3.5rem, 12vw, 5rem);
 }
 
 .card__content {
@@ -42,7 +42,8 @@ body {
 
 .card__text {
   font-family: "Satisfy", Verdana, sans-serif;
-  font-size: clamp(2.5rem, 10vw, 3.5rem);
+  font-size: clamp(4rem, 10vw, 3.5rem);
+  color: #000000;
 }
 
 .card__image {
