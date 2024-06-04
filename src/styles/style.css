@@ -38,11 +38,72 @@ body {
   width: clamp(350px, 90%, 600px);
 }
 
+@keyframes wobble {
+  from {
+    transform: none;
+  }
+
+  15% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30% {
+    transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 1deg);
+  }
+
+  45% {
+    transform: translate3d(-6%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  60% {
+    transform: translate3d(3%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    transform: translate3d(0%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
 .card {
   background-color: #fcc309;
   border-radius: 50px;
   color: #000000;
   padding: 40px;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card__face {
+  color: rgb(237, 0, 0);
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card__face_back {
+  display: none;
+  background: slateblue;
+  transform: rotateY(180deg);
+}
+
+.card__animation_flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__animation_shaking {
+  animation: wobble 3s infinite;
+}
+
+.card__animation_stopped {
+  animation: none;
 }
 
 .card__title {
@@ -63,57 +124,4 @@ body {
 .card__image {
   width: clamp(220px, 100%, 450px);
   margin: 0 auto;
-}
-
-.balloon {
-  display: inline-block;
-  width: 90px;
-  height: 100px;
-  background: hsl(215, 50%, 65%);
-  border-radius: 80%;
-  position: relative;
-  box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.07);
-  margin: 20px 30px;
-  transition: transform 0.5s ease;
-  z-index: 10;
-  animation: balloons 4s ease-in-out infinite;
-  transform-origin: bottom center;
-
-  position: absolute;
-  top: 3vh;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@keyframes balloons {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-4deg);
-  }
-  50% {
-    transform: translateY(-25px) rotate(4deg);
-  }
-}
-
-.balloon:before {
-  content: "▲";
-  font-size: 2rem;
-  color: hsl(215, 30%, 50%);
-  display: block;
-  text-align: center;
-  width: 100%;
-  position: absolute;
-  bottom: -12px;
-  z-index: -100;
-}
-
-.balloon:after {
-  display: inline-block;
-  top: 104px;
-  position: absolute;
-  height: 250px;
-  width: 1px;
-  margin: 0 auto;
-  content: "";
-  background: rgba(0, 0, 0, 0.2);
 }
